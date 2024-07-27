@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".MainDashboard">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/view_background"
+        android:backgroundTint="@color/yellow">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="9dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.1"
+                    android:text="@string/welcome"
+                    android:textColor="@color/red"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/get_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/user_name"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfileTv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end"
+                android:src="@drawable/profile_image"
+                app:tint="@color/yellow"/>
+
+
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_view"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/dash1"
+                    android:padding="8dp"
+                    android:backgroundTint="@color/sky_blue"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/words_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Latest Movies and Series"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/dark_blue"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:id="@+id/second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first"
+                            android:text="All genres available"
+                            android:textStyle="bold"
+                            android:layout_margin="7dp"
+                            android:textColor="@color/dark_blue"
+                            android:textSize="16sp"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second"
+                            android:text="View the latest movies"
+                            android:textStyle="bold"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/dark_blue"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1" />
+
+                        <Button
+                            android:id="@+id/viewMoviesBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/blue"
+                            android:text="View " />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_toEndOf="@id/words_layout"
+                        android:src="@drawable/movie" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_view"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/dash2"
+                    android:layout_marginBottom="20dp"
+                    android:padding="8dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/words_layout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/first1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get the Best Barbershops"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:id="@+id/second1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first1"
+                            android:text="Around you!"
+                            android:textStyle="bold"
+                            android:layout_margin="7dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second1"
+                            android:text="View the best barbershops"
+                            android:textStyle="bold"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1" />
+
+                        <Button
+                            android:id="@+id/viewBarbershopBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/blue"
+                            android:text="View " />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_toEndOf="@id/words_layout1"
+                        android:src="@drawable/barbershop" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_view"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/dash3"
+                    android:layout_marginBottom="20dp"
+                    android:padding="8dp"
+                    android:backgroundTint="@color/orange"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/words_layout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/first2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="The Best Car Wash around"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:id="@+id/second2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first2"
+                            android:text="Service for you!"
+                            android:textStyle="bold"
+                            android:layout_margin="7dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second2"
+                            android:text="Faster and cleaner than before"
+                            android:textStyle="bold"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1" />
+
+                        <Button
+                            android:id="@+id/viewCarWashBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/blue"
+                            android:text="View " />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_toEndOf="@id/words_layout2"
+                        android:src="@drawable/carwash" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_view"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/dash4"
+                    android:layout_marginBottom="20dp"
+                    android:padding="8dp"
+                    android:backgroundTint="@color/green"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/words_layout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/first3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get Designer Clothes now!"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:id="@+id/second3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first3"
+                            android:text="Best prices."
+                            android:textStyle="bold"
+                            android:layout_margin="7dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second3"
+                            android:text="Get the discounts at affordble prices"
+                            android:textStyle="bold"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:letterSpacing="0.1" />
+
+                        <Button
+                            android:id="@+id/viewClothesBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/blue"
+                            android:text="View " />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_toEndOf="@id/words_layout3"
+                        android:src="@drawable/boutique" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dashRv"/>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="5dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.1"
+                                android:textSize="16sp"
+                                android:text="Barber Shops"/>
+                            <ImageButton
+                                android:id="@+id/allBarbersBtn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/view_list_icon"
+                                app:tint="@color/blue" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/barberRv"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="5dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.1"
+                                android:textSize="16sp"
+                                android:text="@string/car_wash"/>
+                            <ImageButton
+                                android:id="@+id/allCarWashBtn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/view_list_icon"
+                                app:tint="@color/blue" />
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/carWashRv"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="5dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.1"
+                                android:textSize="16sp"
+                                android:text="Movies and Cyber"/>
+                            <ImageButton
+                                android:id="@+id/allMovieBtn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/view_list_icon"
+                                app:tint="@color/blue" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/moviesRv"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:padding="5dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.1"
+                                android:textSize="16sp"
+                                android:text="Thrift"/>
+                            <ImageButton
+                                android:id="@+id/allThriftBtn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/view_list_icon"
+                                app:tint="@color/blue" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/clothesRv"/>
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="15dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/card_view"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp">
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/messageIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="30dp"
+                android:focusable="true"
+                android:src="@drawable/chat_icon"
+                android:clickable="true"
+                app:tint="@color/dark_blue" />
+            <ImageView
+                android:id="@+id/bookedIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/booked_icon"
+                app:tint="@color/dark_blue" />
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/profile_icon"
+                app:tint="@color/dark_blue" />
+            <ImageView
+                android:id="@+id/feedBackIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/feed_back"
+                app:tint="@color/dark_blue" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

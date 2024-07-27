@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840669671308",
+    "project_id": "servicemtaani-d29e5",
+    "storage_bucket": "servicemtaani-d29e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840669671308:android:e183e2693adfc7bb87b0a9",
+        "android_client_info": {
+          "package_name": "com.example.smtaani"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9iqBMxKrJziG3JpFoqSxg_qfAAq4bbWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
